@@ -1,22 +1,56 @@
-#wrap {}
+#wrap {
+    /* 1. 전체 레이아웃의 너비를 고정(px)이 아닌 가변형으로 만들기 */
+    /* 2. 화면 너비가 너무 작아지면 레이아웃이 깨지므로 최소 여기까지만 작아져야 한다는 뜻으로 모바일 최소너비하고 css 최소너비 설정하기 */
+    min-width: 320px;
+    min-height: 956px;
+    margin: var(--spacing-auto);
+    background-color: aqua;
+}
 #wrap .intro {
     background-image: url(../images/bg1.png);
     background-size: cover;/* 피그마 - 채우기 */
-    position: relative;
-    z-index: 30;
+    position: relative; /* after에 들어간 absolute 기준 */
+    background-position: center top;
 }
 #wrap .intro::after {/* 이미지 위 깔리는 반투명 그라데이션용도 가상 선택자 */
     background: var(--color-gradient-dark);
-    content:'center';display:block;
+    content:''; display:block;
     width: 100%; height: 100%;
-    position: absolute; left: 0; top: 0; z-index: 40;
+    position: absolute; left: 0; top: 0; z-index: 90;
 }
 #wrap .intro .container {
-    height: 569px; /* 실제 내용 태그들을 묶는 레이아웃 태그에 크기 입력 권장 */
+    height: 615px; /* 실제 내용 태그들을 묶는 레이아웃 태그에 크기 입력 권장 */
+    z-index: 100;
+    position: relative; /* z-index 기준을 두기 위해 설정 / 포지션 속성 */
 }
-#wrap .intro .container .logo {width: var(--icon-lg);}
+#wrap .intro .container .logo {
+    width: var(--icon-lg);
+    position: absolute; left: 17px; top: 43px;
+}
 #wrap .intro .container .logo img {width: 100%;}
-#wrap .intro .container .title {}
-#wrap .intro .container .btn_g {}
+#wrap .intro .container .title {
+    font-size: var(--m-font-size-lg);
+    color: var(--color-light);
+    text-align: center;
+}
+#wrap .intro .container .btn_g {
+    gap:10px;
+    position: absolute;
+    bottom: 30px;
+}
+#wrap .intro .container .btn_g * {
+    color: var(--color-light);
+    font-size: var(--m-font-size-base);
+    background-color: var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 50px;
+    gap:10px;
+}
+#wrap .intro .container .btn_g *::after {
+    filter: invert(1);
+    content:''; display: block; width: 8px; height: 16px;
+    background-image: url(../images/arrow.svg);
+    background-size: 100%;
+}
 #wrap .intro .container .btn_g .sponser_btn {}
 #wrap .intro .container .btn_g .sponser_qna_btn {}
