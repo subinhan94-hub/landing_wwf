@@ -8,9 +8,10 @@
     --color-gradient-dark:linear-gradient(180deg,rgba(0,0,0,0), rgba(0,0,0,1));
 
     /* 글자크기 */
-    --m-font-size-base:0.875em;/* 내용 */
-    --m-font-size-sm:1em;/* 버튼 */
+    --m-font-size-base:1em;/* 내용 */
+    --m-font-size-sm:0.875em;/* 버튼 */
     --m-font-size-lg:1.875em;/* 제목 */
+    --m-font-size-l:1.25em;/* 보조 제목 */
     --t-font-size-base:1em;/* 내용 */
     --t-font-size-sm:1.25em;/* 버튼 */
     --t-font-size-lg:2.75em;/* 제목 */
@@ -19,6 +20,7 @@
     --d-font-size-lg:3.438em;/* 제목 */
 
     /* 크기, 여백 */
+    --border-radius:50px;
     /* 모바일 */
     --spacing-m-l-r:15px;
     /* 테블릿 */
