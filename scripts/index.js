@@ -11,13 +11,14 @@ answer_popup_bg.style.display = 'none';
 
 // addEventListener 이벤트를 호출하는 함수
 // addEventListener('이벤트종류',실행함수)
-quiz_btn.addEventListener('click',popup_open())
+quiz_btn.addEventListener('click',popup_open)
+answer_close_btn.addEventListener('click',popup_close)
 
 function popup_open() {
-    answer_popup_bg.style.display = 'block';
+    answer_popup_bg.style.display = 'flex';
 }
 
-answer_close_btn.addEventListener('click',popup_close())
+
 function popup_close() {
     answer_popup_bg.style.display = 'none';
 }

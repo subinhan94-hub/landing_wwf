@@ -15,9 +15,11 @@
     --t-font-size-base:1em;/* 내용 */
     --t-font-size-sm:1.25em;/* 버튼 */
     --t-font-size-lg:2.75em;/* 제목 */
+    --t-font-size-l:1.8em;/* 보조 제목 */
     --d-font-size-base:1.25em;/* 내용 */
     --d-font-size-sm:1.375em;/* 버튼 */
     --d-font-size-lg:3.438em;/* 제목 */
+    --d-font-size-l:2.5em;/* 보조 제목 */
 
     /* 크기, 여백 */
     --border-radius:50px;
@@ -38,6 +40,44 @@
 }/* e:root */
 
 /* 공통 디자인 Class */
+/* --------------------공통 후원/질문버튼(모바일) */
+
+.sponser_btn, /* 후원하기 버튼 */
+.sponser_qna_btn { color: var(--color-light);
+    font-size: var(--m-font-size-base);
+    background-color: var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 50px;
+    gap:10px;
+    display: block;
+}
+.sponser_btn::after, /* 버튼 화살표 */
+.sponser_qna_btn::after {
+    filter: invert(1);
+    content:''; display: block; width: 8px; height: 16px;
+    background-image: url(../images/arrow.svg);
+    background-size: 100%;
+}
+/* --------------------------공통 후원/질문버튼(태블릿) */
+@media screen and (min-width:760px) {
+    .sponser_btn, .sponser_qna_btn {
+        font-size: var(--t-font-size-base);
+        padding:0;
+    }
+    .sponser_btn::after, .sponser_qna_btn::after {width: 10px; height: 20px;}
+    .sponser_btn {padding: 10px 30px;}
+.sponser_qna_btn {
+    padding: 5px 15px;
+    position: absolute; bottom: 60px; right: 67px;
+    }
+}
+/* ---------------------------공통 후원/질문버튼(데스크탑) */
+@media screen and (min-width:1120px){
+    .sponser_btn, .sponser_qna_btn {font-size: var(--d-font-size-base);}
+    .sponser_btn {padding: 15px 55px;}
+    }
+
+
 .flex-row-center {
     display:flex; flex-flow:row nowrap;
     justify-content: center; align-items: center;

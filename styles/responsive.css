@@ -29,20 +29,6 @@
         /* absolute 해제 목적의 변경 값 -> stati요 (포지션 기능 해제(위 옵션 불가) */
         bottom: 0;
     }
-    #wrap .intro .container .btn_g * {
-        font-size: var(--t-font-size-base);
-        padding:0;
-    }
-    #wrap .intro .container .btn_g *::after {
-        width: 10px; height: 20px;
-    }
-    #wrap .intro .container .btn_g .sponser_btn {
-        padding: 10px 30px;
-    }
-#wrap .intro .container .btn_g .sponser_qna_btn {
-    padding: 5px 15px;
-    position: absolute; bottom: 60px; right: 67px;
-    }
     /* --------------------------------------------2행 퀴즈(테블릿 시작) */
     #wrap .quiz {
         padding:60px 60px;
@@ -83,6 +69,34 @@
     #wrap .quiz .container .quiz_status .situation dd em {}
     #wrap .quiz .container .quiz_status .update {}
     /* --------------------------------------------2행 퀴즈(테블릿 종료) */
+    /* --------------------------------------------3행 비디오 */
+    #wrap .video_bg {}
+    #wrap .video_bg .container {
+        gap:20px;
+        padding: 100px 60px;
+    }
+    #wrap .video_bg .container h1 {
+        font-size: var(--t-font-size-lg);
+        font-weight: 600;
+    }
+    #wrap .video_bg .container .video {}
+    #wrap .video_bg .container .video iframe {}
+    #wrap .video_bg .container .sponser_btn {
+        font-size: var(--t-font-size-base);
+        padding: 10px 30px;
+    }
+    /* --------------------------------------------3행 비디오 종료 */
+    /* --------------------------------------------4행 면적 시작 */
+    #wrap .area_bg {}
+    #wrap .area_bg .container {padding: 120px 60px;}
+    #wrap .area_bg .container * {margin-bottom: 30px;}
+    #wrap .area_bg .container h1 {font-size: var(--t-font-size-l)}
+    #wrap .area_bg .container h1 span {display: inline;}
+    #wrap .area_bg .container h1 em {}
+    #wrap .area_bg .container .content {font-size: var(--t-font-size-sm);}
+    #wrap .area_bg .container p {}
+    #wrap .area_bg .container p img {}
+    /* --------------------------------------------4행 면적 종료 */
 }/* e:min760 */
 /* ------------------------------------------------태블릿->데스크탑 */
 @media screen and (min-width:1120px) {/* 1120 이상일 때  */
@@ -102,19 +116,11 @@
         font-size:var(--d-font-size-lg);
         margin-bottom: 32px;
     }
-    #wrap .intro .container .btn_g {}
-    #wrap .intro .container .btn_g * {
-        font-size: var(--d-font-size-base);
-    }
-    #wrap .intro .container .btn_g *::after {}
-    #wrap .intro .container .btn_g .sponser_btn {
-        padding: 15px 55px;
-    }
     #wrap .intro .container .btn_g .sponser_btn::after {width: 12px; height: 24px;}
-#wrap .intro .container .btn_g .sponser_qna_btn {
+    #wrap .intro .container .btn_g .sponser_qna_btn {
     padding: 10px 25px;
     position: absolute; bottom: 42px; right: 0px;
-}
+    }
 /* --------------------------------------------2행 데스크탑 시작 */
     #wrap .quiz {}
     #wrap .quiz .container {
@@ -152,4 +158,30 @@
     #wrap .quiz .container .quiz_status .situation dd em {}
     #wrap .quiz .container .quiz_status .update {}
 /* --------------------------------------------2행 데스크탑 종료 */
+/* --------------------------------------------3행 비디오 시작 */
+#wrap .video_bg {}
+    #wrap .video_bg .container {
+        gap:30px;
+        padding: 120px 0;
+    }
+    #wrap .video_bg .container h1 {
+        font-size: var(--d-font-size-lg);
+    }
+    #wrap .video_bg .container .video {}
+    #wrap .video_bg .container .video iframe {}
+    #wrap .video_bg .container .sponser_btn {
+        font-size: var(--t-font-size-base);
+        padding: 15px 55px;
+    }
+    /* --------------------------------------------3행 비디오 종료 */
+    /* --------------------------------------------4행 면적 시작 */
+    #wrap .area_bg {}
+    #wrap .area_bg .container {}
+    #wrap .area_bg .container * {margin-bottom: 60px;}
+    #wrap .area_bg .container h1 {font-size: var(--d-font-size-l)}
+    #wrap .area_bg .container h1 em {}
+    #wrap .area_bg .container .content {font-size: var(--d-font-size-sm);}
+    #wrap .area_bg .container p {}
+    #wrap .area_bg .container p img {}
+    /* --------------------------------------------4행 면적 종료 */
 }
